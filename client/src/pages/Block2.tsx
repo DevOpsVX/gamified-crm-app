@@ -63,7 +63,7 @@ export function Block2({ onNext, isLoading = false }: Block2Props) {
         onSubmit={handleSubmit}
         isLoading={isLoading}
       >
-        <FormField label="Principais objeções do público" required>
+        <FormField label="Principais objeções do público">
           <Textarea
             placeholder="Quais são as principais objeções/dúvidas dos seus clientes?"
             value={formData.mainObjections}
@@ -72,7 +72,7 @@ export function Block2({ onNext, isLoading = false }: Block2Props) {
           />
         </FormField>
 
-        <FormField label="Como funciona o atendimento atual" required>
+        <FormField label="Como funciona o atendimento atual">
           <Textarea
             placeholder="Descreva o processo de atendimento atual"
             value={formData.attendanceProcess}
@@ -81,7 +81,7 @@ export function Block2({ onNext, isLoading = false }: Block2Props) {
           />
         </FormField>
 
-        <FormField label="Horários de atendimento" required>
+        <FormField label="Horários de atendimento">
           <Input
             placeholder="Ex: Seg-Sex 9h-18h, Sab 9h-13h"
             value={formData.attendanceHours}
@@ -90,7 +90,7 @@ export function Block2({ onNext, isLoading = false }: Block2Props) {
           />
         </FormField>
 
-        <FormField label="Formas de pagamento aceitas" required>
+        <FormField label="Formas de pagamento aceitas">
           <Input
             placeholder="Ex: Cartão, PIX, Boleto, Dinheiro"
             value={formData.paymentMethods}
@@ -99,7 +99,7 @@ export function Block2({ onNext, isLoading = false }: Block2Props) {
           />
         </FormField>
 
-        <FormField label="Usa algum sistema de gestão?" required>
+        <FormField label="Usa algum sistema de gestão?">
           <Input
             placeholder="Ex: Nenhum, Excel, CRM específico, etc"
             value={formData.managementSystem}
@@ -108,7 +108,7 @@ export function Block2({ onNext, isLoading = false }: Block2Props) {
           />
         </FormField>
 
-        <FormField label="Existe mensagem-chave da marca?" required>
+        <FormField label="Existe mensagem-chave da marca?">
           <Textarea
             placeholder="Qual é a mensagem principal que você quer comunicar?"
             value={formData.brandMessage}

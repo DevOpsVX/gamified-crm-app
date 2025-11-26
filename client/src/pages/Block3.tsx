@@ -60,7 +60,7 @@ export function Block3({ onNext, isLoading = false }: Block3Props) {
         onSubmit={handleSubmit}
         isLoading={isLoading}
       >
-        <FormField label="O que a IA deve fazer" required>
+        <FormField label="O que a IA deve fazer">
           <Textarea
             placeholder="Descreva as principais funções que a IA deve desempenhar"
             value={formData.aiShouldDo}
@@ -69,7 +69,7 @@ export function Block3({ onNext, isLoading = false }: Block3Props) {
           />
         </FormField>
 
-        <FormField label="O que NÃO deve fazer" required>
+        <FormField label="O que NÃO deve fazer">
           <Textarea
             placeholder="Quais são os limites? O que a IA não deve fazer?"
             value={formData.aiShouldNotDo}
@@ -78,7 +78,7 @@ export function Block3({ onNext, isLoading = false }: Block3Props) {
           />
         </FormField>
 
-        <FormField label="Tom de voz da IA" required>
+        <FormField label="Tom de voz da IA">
           <Input
             placeholder="Ex: Profissional, Amigável, Técnico, Casual"
             value={formData.aiVoiceTone}
@@ -87,7 +87,7 @@ export function Block3({ onNext, isLoading = false }: Block3Props) {
           />
         </FormField>
 
-        <FormField label="Função principal da IA" required>
+        <FormField label="Função principal da IA">
           <Input
             placeholder="Ex: Atendimento ao cliente, Qualificação de leads, Suporte técnico"
             value={formData.aiMainFunction}
@@ -96,7 +96,7 @@ export function Block3({ onNext, isLoading = false }: Block3Props) {
           />
         </FormField>
 
-        <FormField label="Tarefas manuais que gostaria de automatizar" required>
+        <FormField label="Tarefas manuais que gostaria de automatizar">
           <Textarea
             placeholder="Quais tarefas repetitivas você gostaria que a IA automatizasse?"
             value={formData.tasksToAutomate}

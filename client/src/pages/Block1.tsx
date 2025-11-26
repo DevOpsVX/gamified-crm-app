@@ -61,7 +61,7 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
         onSubmit={handleSubmit}
         isLoading={isLoading}
       >
-        <FormField label="Cidade/Região de atuação" required>
+        <FormField label="Cidade/Região de atuação">
           <Input
             placeholder="Ex: São Paulo, SP"
             value={formData.city}
@@ -70,7 +70,7 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
           />
         </FormField>
 
-        <FormField label="Possui site? Qual?" required>
+        <FormField label="Possui site? Qual?">
           <Input
             placeholder="Ex: www.exemplo.com.br"
             value={formData.website}
@@ -79,7 +79,7 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
           />
         </FormField>
 
-        <FormField label="Oferta principal" required>
+        <FormField label="Oferta principal">
           <Textarea
             placeholder="Descreva sua principal oferta/serviço"
             value={formData.mainOffer}
@@ -88,7 +88,7 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
           />
         </FormField>
 
-        <FormField label="Ticket médio" required>
+        <FormField label="Ticket médio">
           <Input
             placeholder="Ex: R$ 500 - R$ 2.000"
             value={formData.averageTicket}
@@ -97,7 +97,7 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
           />
         </FormField>
 
-        <FormField label="Volume médio de atendimentos por semana" required>
+        <FormField label="Volume médio de atendimentos por semana">
           <Input
             placeholder="Ex: 10-15 atendimentos"
             value={formData.weeklyAttendance}

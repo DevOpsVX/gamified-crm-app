@@ -90,3 +90,10 @@
 ## Ajustes Solicitados
 - [x] Substituir avatar por novo design (imagem SVG/PNG)
 - [x] Remover "ou tabela" do campo de Ticket médio no Bloco 1
+
+
+## Ajustes Adicionais
+- [ ] Remover fundo branco do avatar
+- [ ] Criar avatar animado com SVG (sem fundo branco)
+- [ ] Implementar animações: movimento, bater palmas, piscar, sorrir
+- [x] Remover obrigatoriedade dos campos do formulário (required=false)
