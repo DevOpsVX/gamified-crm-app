@@ -85,3 +85,8 @@
 - [x] Salvar checkpoint do projeto
 - [ ] Preparar repositório GitHub
 - [ ] Fazer deploy no GitHub
+
+
+## Ajustes Solicitados
+- [x] Substituir avatar por novo design (imagem SVG/PNG)
+- [x] Remover "ou tabela" do campo de Ticket médio no Bloco 1

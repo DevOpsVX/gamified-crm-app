@@ -88,7 +88,7 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
           />
         </FormField>
 
-        <FormField label="Ticket médio ou tabela" required>
+        <FormField label="Ticket médio" required>
           <Input
             placeholder="Ex: R$ 500 - R$ 2.000"
             value={formData.averageTicket}
