@@ -21,7 +21,7 @@ interface Block2Props {
 }
 
 export function Block2({ onNext, isLoading = false }: Block2Props) {
-  const [avatarState, setAvatarState] = useState<"idle" | "clap" | "thinking">("idle");
+  const [avatarState, setAvatarState] = useState<"idle" | "clap" | "thinking" | "shine">("idle");
   const [formData, setFormData] = useState<Block2Data>({
     mainObjections: "",
     attendanceProcess: "",
@@ -32,11 +32,14 @@ export function Block2({ onNext, isLoading = false }: Block2Props) {
   });
 
   const handleSubmit = async () => {
-    setAvatarState("clap");
+    setAvatarState("shine");
     setTimeout(() => {
-      setAvatarState("thinking");
-      onNext(formData);
-    }, 1200);
+      setAvatarState("clap");
+      setTimeout(() => {
+        setAvatarState("thinking");
+        onNext(formData);
+      }, 600);
+    }, 800);
   };
 
   const handleInputChange = (field: keyof Block2Data, value: string) => {

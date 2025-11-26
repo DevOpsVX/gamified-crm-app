@@ -97,3 +97,6 @@
 - [x] Criar avatar animado com SVG (sem fundo branco)
 - [x] Implementar animações: movimento, bater palmas, piscar, sorrir
 - [x] Remover obrigatoriedade dos campos do formulário (required=false)
+
+- [x] Adicionar ícone redondo com imagem do robô
+- [x] Implementar efeitos de brilho ao enviar respostas

@@ -20,7 +20,7 @@ interface Block1Props {
 }
 
 export function Block1({ onNext, isLoading = false }: Block1Props) {
-  const [avatarState, setAvatarState] = useState<"idle" | "happy" | "thinking">("idle");
+  const [avatarState, setAvatarState] = useState<"idle" | "happy" | "thinking" | "shine">("idle");
   const [formData, setFormData] = useState<Block1Data>({
     city: "",
     website: "",
@@ -30,11 +30,14 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
   });
 
   const handleSubmit = async () => {
-    setAvatarState("happy");
+    setAvatarState("shine");
     setTimeout(() => {
-      setAvatarState("thinking");
-      onNext(formData);
-    }, 1000);
+      setAvatarState("happy");
+      setTimeout(() => {
+        setAvatarState("thinking");
+        onNext(formData);
+      }, 500);
+    }, 800);
   };
 
   const handleInputChange = (field: keyof Block1Data, value: string) => {
