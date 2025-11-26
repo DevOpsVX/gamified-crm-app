@@ -11,6 +11,10 @@ export interface KanbanCard {
   id: string;
   title: string;
   description?: string;
+  opportunityValue?: string;
+  assignee?: string;
+  assigneeInitials?: string;
+  assigneeColor?: string;
 }
 
 interface KanbanProps {
@@ -94,11 +98,21 @@ export function Kanban({ columns, onColumnsChange, editable = false }: KanbanPro
                     key={card.id}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-muted p-3 rounded border border-border hover:border-accent transition-colors"
+                    className="bg-muted p-3 rounded border border-border hover:border-accent transition-colors flex items-start justify-between gap-2"
                   >
-                    <p className="font-medium text-foreground text-sm">{card.title}</p>
-                    {card.description && (
-                      <p className="text-xs text-muted-foreground mt-1">{card.description}</p>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium text-foreground text-sm">{card.title}</p>
+                      {card.opportunityValue && (
+                        <p className="text-xs text-muted-foreground mt-1">Opportunity Value: {card.opportunityValue}</p>
+                      )}
+                    </div>
+                    {card.assigneeInitials && (
+                      <div
+                        className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white ${card.assigneeColor || "bg-cyan-500"}`}
+                        title={card.assignee}
+                      >
+                        {card.assigneeInitials}
+                      </div>
                     )}
                   </motion.div>
                 ))

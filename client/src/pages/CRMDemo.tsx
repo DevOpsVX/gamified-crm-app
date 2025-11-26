@@ -12,43 +12,43 @@ export function CRMDemo({ onNext }: CRMDemoProps) {
       id: "col-1",
       title: "Novo Lead",
       cards: [
-        { id: "card-1", title: "Contato via LinkedIn", description: "João Silva" },
-        { id: "card-2", title: "Email de interesse", description: "Maria Santos" },
-        { id: "card-9", title: "Indicação de cliente", description: "Beatriz dos Santos" },
+        { id: "card-1", title: "João Silva", opportunityValue: "$0.00", assignee: "João Silva", assigneeInitials: "JS", assigneeColor: "bg-blue-500" },
+        { id: "card-2", title: "Maria Santos", opportunityValue: "$0.00", assignee: "Maria Santos", assigneeInitials: "MS", assigneeColor: "bg-pink-500" },
+        { id: "card-9", title: "Beatriz dos Santos", opportunityValue: "$0.00", assignee: "Beatriz dos Santos", assigneeInitials: "BS", assigneeColor: "bg-purple-500" },
       ],
     },
     {
       id: "col-2",
       title: "Conversa",
       cards: [
-        { id: "card-3", title: "Primeira reunião agendada", description: "Pedro Costa" },
-        { id: "card-4", title: "Apresentação enviada", description: "Ana Oliveira" },
-        { id: "card-10", title: "Demo agendada", description: "Juliandengue" },
+        { id: "card-3", title: "Pedro Costa", opportunityValue: "$0.00", assignee: "Pedro Costa", assigneeInitials: "PC", assigneeColor: "bg-green-500" },
+        { id: "card-4", title: "Ana Oliveira", opportunityValue: "$0.00", assignee: "Ana Oliveira", assigneeInitials: "AO", assigneeColor: "bg-orange-500" },
+        { id: "card-10", title: "Juliandengue", opportunityValue: "$0.00", assignee: "Juliandengue", assigneeInitials: "JD", assigneeColor: "bg-cyan-500" },
       ],
     },
     {
       id: "col-3",
       title: "Qualificado",
       cards: [
-        { id: "card-5", title: "Orçamento aprovado", description: "Carlos Mendes" },
-        { id: "card-11", title: "Necessidade confirmada", description: "Zola" },
+        { id: "card-5", title: "Carlos Mendes", opportunityValue: "$0.00", assignee: "Carlos Mendes", assigneeInitials: "CM", assigneeColor: "bg-red-500" },
+        { id: "card-11", title: "Zola", opportunityValue: "$0.00", assignee: "Zola", assigneeInitials: "ZL", assigneeColor: "bg-indigo-500" },
       ],
     },
     {
       id: "col-4",
       title: "Proposta",
       cards: [
-        { id: "card-6", title: "Proposta enviada", description: "Fernanda Alves" },
-        { id: "card-7", title: "Negociação em andamento", description: "Roberto Dias" },
-        { id: "card-12", title: "Aguardando resposta", description: "Kelly Ferreira" },
+        { id: "card-6", title: "Fernanda Alves", opportunityValue: "$0.00", assignee: "Fernanda Alves", assigneeInitials: "FA", assigneeColor: "bg-yellow-500" },
+        { id: "card-7", title: "Roberto Dias", opportunityValue: "$0.00", assignee: "Roberto Dias", assigneeInitials: "RD", assigneeColor: "bg-teal-500" },
+        { id: "card-12", title: "Kelly Ferreira", opportunityValue: "$0.00", assignee: "Kelly Ferreira", assigneeInitials: "KF", assigneeColor: "bg-violet-500" },
       ],
     },
     {
       id: "col-5",
       title: "Fechamento",
       cards: [
-        { id: "card-8", title: "Contrato assinado", description: "Lucas Martins" },
-        { id: "card-13", title: "Contrato assinado", description: "Samuel" },
+        { id: "card-8", title: "Lucas Martins", opportunityValue: "$0.00", assignee: "Lucas Martins", assigneeInitials: "LM", assigneeColor: "bg-lime-500" },
+        { id: "card-13", title: "Samuel", opportunityValue: "$0.00", assignee: "Samuel", assigneeInitials: "SL", assigneeColor: "bg-rose-500" },
       ],
     },
   ];
@@ -69,7 +69,7 @@ export function CRMDemo({ onNext }: CRMDemoProps) {
       >
         <h1 className="text-4xl font-bold text-foreground mb-2">Exemplo de CRM</h1>
         <p className="text-muted-foreground">
-          Veja como você pode organizar seus leads e oportunidades em um funil de vendas
+          Veja como você pode organizar seus leads e oportunidades em um funil de vendas. Cada card mostra o nome do lead, valor da oportunidade e quem é responsável.
         </p>
       </motion.div>
 

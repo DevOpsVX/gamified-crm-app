@@ -106,3 +106,5 @@
 - [x] Remover menção de email da tela final
 - [x] Adicionar cards de contatos fictícios no CRM demonstrativo
 - [x] Alterar botão para "Informar quais etapas quero no meu CRM"
+
+- [x] Ajustar estrutura dos cards do Kanban (nome do lead, valor da oportunidade, mini ícones)
