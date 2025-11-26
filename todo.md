@@ -100,3 +100,9 @@
 
 - [x] Adicionar ícone redondo com imagem do robô
 - [x] Implementar efeitos de brilho ao enviar respostas
+
+
+## Ajustes Finais
+- [x] Remover menção de email da tela final
+- [x] Adicionar cards de contatos fictícios no CRM demonstrativo
+- [x] Alterar botão para "Informar quais etapas quero no meu CRM"

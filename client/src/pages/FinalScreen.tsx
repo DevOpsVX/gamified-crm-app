@@ -49,11 +49,8 @@ export function FinalScreen({ onRestart }: FinalScreenProps) {
         <h1 className="text-4xl font-bold text-foreground mb-4">
           Tudo certo!
         </h1>
-        <p className="text-xl text-muted-foreground mb-8">
+        <p className="text-xl text-muted-foreground mb-12">
           Suas respostas foram enviadas com sucesso.
-        </p>
-        <p className="text-lg text-muted-foreground mb-12">
-          Em breve, você receberá um email com as próximas etapas para estruturar sua solução de IA.
         </p>
 
         <Button
