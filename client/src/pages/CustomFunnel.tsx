@@ -5,7 +5,7 @@ import { Kanban, KanbanColumn } from "@/components/Kanban";
 import { Button } from "@/components/ui/button";
 
 interface CustomFunnelProps {
-  onNext: () => void;
+  onNext: (funnelData?: any) => void;
 }
 
 export function CustomFunnel({ onNext }: CustomFunnelProps) {
@@ -23,7 +23,8 @@ export function CustomFunnel({ onNext }: CustomFunnelProps) {
     setTimeout(() => {
       setAvatarState("happy");
       setTimeout(() => {
-        onNext();
+        // Passar dados do funil para salvar no Supabase
+        onNext(columns);
       }, 1000);
     }, 800);
   };
