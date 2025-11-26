@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 
 interface Block1Data {
+  companyName: string;
   city: string;
   website: string;
   mainOffer: string;
@@ -22,6 +23,7 @@ interface Block1Props {
 export function Block1({ onNext, isLoading = false }: Block1Props) {
   const [avatarState, setAvatarState] = useState<"idle" | "happy" | "thinking" | "shine">("idle");
   const [formData, setFormData] = useState<Block1Data>({
+    companyName: "",
     city: "",
     website: "",
     mainOffer: "",
@@ -30,6 +32,10 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
   });
 
   const handleSubmit = async () => {
+    if (!formData.companyName) {
+      alert("O campo 'Nome da Empresa' é obrigatório.");
+      return;
+    }
     setAvatarState("shine");
     setTimeout(() => {
       setAvatarState("happy");
@@ -64,6 +70,16 @@ export function Block1({ onNext, isLoading = false }: Block1Props) {
         onSubmit={handleSubmit}
         isLoading={isLoading}
       >
+        <FormField label="Nome da Empresa">
+          <Input
+            placeholder="Ex: Minha Empresa S.A."
+            value={formData.companyName}
+            onChange={(e) => handleInputChange("companyName", e.target.value)}
+            className="bg-input border border-border text-foreground placeholder:text-muted-foreground"
+            required
+          />
+        </FormField>
+
         <FormField label="Cidade/Região de atuação">
           <Input
             placeholder="Ex: São Paulo, SP"
