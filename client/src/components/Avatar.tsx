@@ -58,6 +58,40 @@ export function Avatar({ state = "idle", size = "md" }: AvatarProps) {
     thinking: { rotateZ: [0, 3, -3, 0], transition: { duration: 1, repeat: Infinity } },
   };
 
+  const leftArmVariants = {
+    idle: { rotate: 0, x: 0 },
+    clap: { rotate: [-20, 40, -20, 0], x: [0, 10, 0], transition: { duration: 0.6 } },
+    bow: { rotate: [0, 90, 90, 0], transition: { duration: 1 } },
+    jump: { rotate: [-10, 20, -10, 0], transition: { duration: 0.6 } },
+  };
+
+  const rightArmVariants = {
+    idle: { rotate: 0, x: 0 },
+    clap: { rotate: [20, -40, 20, 0], x: [0, -10, 0], transition: { duration: 0.6 } },
+    bow: { rotate: [0, 90, 90, 0], transition: { duration: 1 } },
+    jump: { rotate: [10, -20, 10, 0], transition: { duration: 0.6 } },
+  };
+
+  const leftEyeVariants = {
+    idle: { scaleY: 1 },
+    blinking: { scaleY: [1, 0, 1], transition: { duration: 0.2 } },
+    happy: { scaleY: [1, 0.5, 1], scaleX: [1, 0.8, 1], transition: { duration: 0.4 } },
+    thinking: { scaleY: [1, 0.5, 1], transition: { duration: 0.3, repeat: Infinity, repeatDelay: 2 } },
+  };
+
+  const rightEyeVariants = {
+    idle: { scaleY: 1 },
+    blinking: { scaleY: [1, 0, 1], transition: { duration: 0.2 } },
+    happy: { scaleY: [1, 0.5, 1], scaleX: [1, 0.8, 1], transition: { duration: 0.4 } },
+    thinking: { scaleY: [1, 0.5, 1], transition: { duration: 0.3, repeat: Infinity, repeatDelay: 2 } },
+  };
+
+  const mouthVariants = {
+    idle: { scaleY: 1, opacity: 0.7 },
+    happy: { scaleY: [1, 1.3, 1], opacity: 1, transition: { duration: 0.4 } },
+    thinking: { scaleY: [0.8, 1, 0.8], opacity: 0.7, transition: { duration: 0.5, repeat: Infinity, repeatDelay: 2 } },
+  };
+
   const glowVariants = {
     idle: { opacity: 0.4, scale: 1 },
     happy: { opacity: [0.4, 1, 0.4], scale: [1, 1.1, 1], transition: { duration: 0.6 } },
@@ -87,15 +121,83 @@ export function Avatar({ state = "idle", size = "md" }: AvatarProps) {
           animate={currentState}
         />
 
-        {/* Avatar Image */}
-        <motion.img
-          src="/avatar.png"
-          alt="Avatar"
+        {/* Avatar SVG */}
+        <motion.svg
+          viewBox="0 0 200 240"
           className={`${sizeClass} relative z-10 drop-shadow-2xl`}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-        />
+        >
+          {/* Body */}
+          <ellipse cx="100" cy="140" rx="50" ry="60" fill="#e8eef5" />
+
+          {/* Left Arm */}
+          <motion.g
+            variants={leftArmVariants}
+            animate={currentState}
+            style={{ originX: "70px", originY: "120px" }}
+          >
+            <ellipse cx="50" cy="120" rx="20" ry="45" fill="#d4dce8" />
+          </motion.g>
+
+          {/* Right Arm */}
+          <motion.g
+            variants={rightArmVariants}
+            animate={currentState}
+            style={{ originX: "130px", originY: "120px" }}
+          >
+            <ellipse cx="150" cy="120" rx="20" ry="45" fill="#d4dce8" />
+          </motion.g>
+
+          {/* Head */}
+          <ellipse cx="100" cy="70" rx="45" ry="50" fill="#c5cdd8" />
+
+          {/* Head Screen/Visor */}
+          <rect x="65" y="35" width="70" height="50" rx="10" fill="#1a2a3a" />
+
+          {/* Left Eye */}
+          <motion.ellipse
+            cx="80"
+            cy="55"
+            rx="8"
+            ry="12"
+            fill="#00d4ff"
+            variants={leftEyeVariants}
+            animate={currentState}
+            style={{ originX: "80px", originY: "55px" }}
+          />
+
+          {/* Right Eye */}
+          <motion.ellipse
+            cx="120"
+            cy="55"
+            rx="8"
+            ry="12"
+            fill="#00d4ff"
+            variants={rightEyeVariants}
+            animate={currentState}
+            style={{ originX: "120px", originY: "55px" }}
+          />
+
+          {/* Mouth */}
+          <motion.ellipse
+            cx="100"
+            cy="72"
+            rx="10"
+            ry="8"
+            fill="#00d4ff"
+            variants={mouthVariants}
+            animate={currentState}
+            style={{ originX: "100px", originY: "72px" }}
+          />
+
+          {/* Left Ear */}
+          <ellipse cx="55" cy="50" rx="15" ry="25" fill="#c5cdd8" />
+
+          {/* Right Ear */}
+          <ellipse cx="145" cy="50" rx="15" ry="25" fill="#c5cdd8" />
+        </motion.svg>
 
         {/* Sparkles for happy state */}
         {currentState === "happy" && (

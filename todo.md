@@ -93,7 +93,7 @@
 
 
 ## Ajustes Adicionais
-- [ ] Remover fundo branco do avatar
-- [ ] Criar avatar animado com SVG (sem fundo branco)
-- [ ] Implementar animações: movimento, bater palmas, piscar, sorrir
+- [x] Remover fundo branco do avatar
+- [x] Criar avatar animado com SVG (sem fundo branco)
+- [x] Implementar animações: movimento, bater palmas, piscar, sorrir
 - [x] Remover obrigatoriedade dos campos do formulário (required=false)
