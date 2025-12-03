@@ -30,6 +30,7 @@ export const appRouter = router({
       .input(
         z.object({
           session_id: z.string(),
+          company_name: z.string().optional(),
           city: z.string().optional(),
           website: z.string().optional(),
           offer: z.string().optional(),
@@ -58,6 +59,7 @@ export const appRouter = router({
         z.object({
           id: z.string(),
           data: z.object({
+            company_name: z.string().optional(),
             city: z.string().optional(),
             website: z.string().optional(),
             offer: z.string().optional(),

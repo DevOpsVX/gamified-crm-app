@@ -40,6 +40,7 @@ export default function Home() {
       // Criar nova resposta no Supabase
       const response = await createResponse.mutateAsync({
         session_id: sessionId,
+        company_name: data.companyName,
         city: data.city,
         website: data.website,
         offer: data.mainOffer,

@@ -11,6 +11,7 @@ export interface UserResponse {
   updated_at?: string;
   session_id: string;
   // Block 1 - Informações do Negócio
+  company_name?: string;
   city?: string;
   website?: string;
   offer?: string;
